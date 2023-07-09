@@ -46,14 +46,7 @@ export default function App() {
             </div>
             <div className="col-sm text-center text-sm-end mt-4 mt-sm-0">
               <h1>Theme Universe</h1>
-              <a
-                className={"btn " + theme.button}
-                href="https://zummon.page/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Made by zummon
-              </a>
+              <a className={"btn " + theme.button}>Made by zummon</a>
             </div>
           </div>
         </div>
