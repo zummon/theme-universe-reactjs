@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState,useEffect} from "react";
 import Icon from "./icon";
 import Svg from "./Svg";
 import themes from "./themes.json";
@@ -29,16 +29,16 @@ export default function App() {
   }
 
   // get viewer's setting once this website load
-  React.useEffect(function () {
+  useEffect(function () {
     handleTheme(/*localStorage.getItem("theme")*/);
   }, []);
 
   return (
-    <div
-      className={"sm:p-12 min-h-screen " + theme.plate}
-      style={{ maxWidth: "640px" }}
-    >
-      <div className="mx-auto mb-4 flex flex-wrap gap-2 justify-center rounded-md border p-4">
+    <div className={"sm:p-12 min-h-screen " + theme.plate}>
+      <div 
+        className="mx-auto mb-4 flex flex-wrap gap-2 justify-center rounded-md border p-4"
+        style={{ maxWidth: "640px" }}
+      >
         <div className="text-center">
           <Icon />
         </div>
