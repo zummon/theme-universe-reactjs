@@ -1,9 +1,10 @@
+import {useState} from "react";
 import Icon from "./icon";
 import Svg from "./Svg";
 import themes from "./themes.json";
 
 export default function App() {
-  var [theme, setTheme] = React.useState(themes[0]);
+  var [theme, setTheme] = useState(themes[0]);
 
   function handleTheme(type) {
     // find the theme in themes variable
@@ -20,8 +21,7 @@ export default function App() {
       object = themes[0];
     }
     // do stuff on this website
-    // document.documentElement.className = object.plate;
-    // document.getElementById("root").className = "p-sm-5 " + object.plate;
+    // ...
 
     // save the setting
     setTheme(object);
@@ -44,7 +44,13 @@ export default function App() {
         </div>
         <div className="grow text-right">
           <h1 className="mb-2 text-3xl font-medium xl:text-4xl">Theme Universe</h1>
-          <a className={"inline-block rounded-md border px-3 py-1.5 " + theme.button}>Made by zummon</a>
+          <a 
+            className={"inline-block rounded-md border px-3 py-1.5 " + theme.button} 
+            href="https://zummon.page/" 
+            target="_blank"
+          >
+            Made by zummon
+          </a>
         </div>
       </div>
       <div 
